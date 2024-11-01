@@ -9,7 +9,7 @@
         <!-- slot que vai ficar os itens do card -->
     </slot>
 
-    <div class="p-3 text-sm text-blue-400 cursor-pointer hover:bg-gray-200 dark:hover:bg-dim-300" :class="defautTransition">
+    <div class="p-3 text-sm text-blue-400 cursor-pointer hover:bg-gray-200 dark:hover:bg-dim-300" :class="defaultTransition">
         Show More
     </div>
 
@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-const {TwitterBorderColors, defautTransition} = UseTailwindConfig();
+const {TwitterBorderColors, defaultTransition} = UseTailwindConfig();
 
 const props = defineProps({
     title: {

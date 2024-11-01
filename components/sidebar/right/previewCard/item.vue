@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-const wrapperClasses = computed(() => `${TwitterBorderColors} ${defautTransition}`);
+const wrapperClasses = computed(() => `${TwitterBorderColors} ${defaultTransition}`);
 
-const {TwitterBorderColors, defautTransition} = UseTailwindConfig();
+const {TwitterBorderColors, defaultTransition} = UseTailwindConfig();
 </script>

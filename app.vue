@@ -1,8 +1,8 @@
 <template>
   <div :class="{'dark': darkMode}">
     <div class="bg-white dark:bg-dim-900">
-      <div class="min-h-full">
-        
+      <!--Main App-->
+      <div v-if="false" class="min-h-full">
         <div class="grid grid-cols-12 mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:gap-5">
           
           <!--left side bar-->
@@ -12,8 +12,8 @@
             </div>
           </div>
           <!--main content-->
-          <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-slate-400">
-            feed
+          <main class="col-span-12 md:col-span-8 xl:col-span-6">
+            <RouterView />
           </main>
           <!--right sidebar-->
           <div class="hidden md:block md:col-span-3 xl:col-span-4">
@@ -23,12 +23,16 @@
           </div>
 
         </div>
-        
       </div>
+
+      <AuthPage v-else />
+
     </div>
   </div>
 </template>
 
 <script setup>
+import { RouterView } from 'vue-router';
+
   const darkMode = ref(false);
 </script>
